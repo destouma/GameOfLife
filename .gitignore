@@ -14,3 +14,4 @@
 /app/.cxx
 *.class
 *.jar
+.idea/
