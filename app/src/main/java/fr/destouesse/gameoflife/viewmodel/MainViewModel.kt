@@ -17,12 +17,13 @@ class MainViewModel: ViewModel(){
     lateinit var gameRunner: GameRunner
 
     fun initGame(){
-        var gameMapSize = GameCoordinate(10,10)
+        var gameMapSize = GameCoordinate(20,20)
         var gameActiveInitCells = listOf<GameCoordinate>(
-            GameCoordinate( 4,4) ,
-            GameCoordinate( 5,3),
-            GameCoordinate( 6,4),
-            GameCoordinate( 6,5)
+            GameCoordinate( 9,9) ,
+            GameCoordinate( 10,9),
+            GameCoordinate( 11,9),
+            GameCoordinate( 10,10),
+            GameCoordinate( 10,8)
         )
 
         gameRunner = GameRunner( gameMapSize ,

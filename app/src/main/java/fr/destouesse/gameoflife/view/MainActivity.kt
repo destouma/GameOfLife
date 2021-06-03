@@ -14,8 +14,12 @@ class MainActivity : AppCompatActivity() {
     private val TAG = "MainActivity"
     private val mainViewModel =  MainViewModel()
 
-    private val buttonGame by lazy {
+    private val buttonGameNext by lazy {
         findViewById<Button>(R.id.button_game)
+    }
+
+    private val buttonGameStart by lazy {
+        findViewById<Button>(R.id.button)
     }
 
     private val textGameMap by lazy {
@@ -26,9 +30,14 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        buttonGame.setOnClickListener(){
+        buttonGameNext.setOnClickListener(){
             mainViewModel.nextIteration()
         }
+
+        buttonGameStart.setOnClickListener(){
+            mainViewModel.initGame()
+        }
+
         mainViewModel.initGame()
 
         val mapObserver = Observer<String> { newMap ->
