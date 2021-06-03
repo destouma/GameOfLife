@@ -15,3 +15,8 @@
 *.class
 *.jar
 .idea/
+/.idea/caches
+/.idea/modules.xml
+/.idea/navEditor.xml
+/.idea/assetWizardSettings.xml
+.cxx
