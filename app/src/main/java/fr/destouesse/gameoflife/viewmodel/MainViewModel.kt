@@ -27,16 +27,13 @@ class MainViewModel: ViewModel(){
         )
 
         gameRunner = GameRunner( gameMapSize ,
-            200,
             gameActiveInitCells)
 
-        var map = gameRunner.start()
-        currentMap.value = map.toString()
+        currentMap.value = gameRunner.start().toString()
     }
 
-    fun nextIteration(){
-        var map = gameRunner.next()
-        currentMap.value = map.toString()
+    fun nextIteration(){ currentMap.value = gameRunner.next().toString()
+
     }
 
 }

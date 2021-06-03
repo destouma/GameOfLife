@@ -1,12 +1,10 @@
 package fr.destouesse.gameoflife.model
 
 class GameRunner ( _size: GameCoordinate,
-                  _nbIterations: Int,
                   _initAliveCells: List<GameCoordinate>)  {
 
     var size = _size
     var gameMap = GameMap(_size)
-    var nbIterations = _nbIterations
     var initAliveCells = _initAliveCells
 
     fun start():GameMap{
