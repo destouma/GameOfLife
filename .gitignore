@@ -1,9 +1,13 @@
 *.iml
+/.gradle
 .gradle
-.gradle/
 /local.properties
 /.idea/workspace.xml
 /.idea/libraries
+/.idea/caches
+/.idea/modules.xml
+/.idea/navEditor.xml
+/.idea/assetWizardSettings.xml
 .DS_Store
 /build
 /captures
@@ -15,9 +19,6 @@
 /app/.cxx
 *.class
 *.jar
-.idea/
-/.idea/caches
-/.idea/modules.xml
-/.idea/navEditor.xml
-/.idea/assetWizardSettings.xml
 .cxx
+*.lock
+*.bin
