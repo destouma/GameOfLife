@@ -1,12 +1,9 @@
 package fr.destouesse.gameoflife.viewmodel
 
-import android.util.Log
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import fr.destouesse.gameoflife.model.GameCoordinate
-import fr.destouesse.gameoflife.model.GameMap
 import fr.destouesse.gameoflife.model.GameRunner
-import fr.destouesse.gameoflife.model.OnGameRunnerListener
 
 class MainViewModel: ViewModel(){
     private val TAG = "MainViewModel"

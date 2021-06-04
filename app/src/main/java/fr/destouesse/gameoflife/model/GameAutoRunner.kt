@@ -3,11 +3,11 @@ package fr.destouesse.gameoflife.model
 class GameAutoRunner(_nbIterations: Int,
                      _size: GameCoordinate,
                      _initAliveCells: List<GameCoordinate>,
-                     _listener: OnGameRunnerListener) {
+                     _listenerAuto: OnGameAutoRunnerListener) {
 
-    val nbIterations = _nbIterations
-    val gameRunner = GameRunner(_size,_initAliveCells)
-    val listener = _listener
+    private val nbIterations = _nbIterations
+    private val gameRunner = GameRunner(_size,_initAliveCells)
+    private val listener = _listenerAuto
 
     fun start(){
          listener.onGameStarted(gameRunner.start())
@@ -17,7 +17,7 @@ class GameAutoRunner(_nbIterations: Int,
         for(iter in 0..(nbIterations-1)){
             listener.onMapChanged(gameRunner.next())
         }
-        listener.onGameFinished(gameRunner.gameMap)
+        listener.onGameFinished()
     }
 
 }

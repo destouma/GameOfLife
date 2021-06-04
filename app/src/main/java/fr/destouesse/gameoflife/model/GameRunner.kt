@@ -3,9 +3,9 @@ package fr.destouesse.gameoflife.model
 class GameRunner ( _size: GameCoordinate,
                   _initAliveCells: List<GameCoordinate>)  {
 
-    var size = _size
+    private var size = _size
+    private var initAliveCells = _initAliveCells
     var gameMap = GameMap(_size)
-    var initAliveCells = _initAliveCells
 
     fun start():GameMap{
         initAliveCells.forEach { activeCell ->
@@ -20,7 +20,7 @@ class GameRunner ( _size: GameCoordinate,
         return gameMap
     }
 
-    fun createNewMap(initMap: GameMap) : GameMap{
+    private fun createNewMap(initMap: GameMap) : GameMap{
         var nextGameMap = GameMap(gameMap.size)
         for (yCell in 0..(size.y-1)){
             for (xCell in 0..(size.x-1)){
@@ -31,7 +31,7 @@ class GameRunner ( _size: GameCoordinate,
 
     }
 
-    fun nextStatus(_x: Int, _y: Int, _gameMap: GameMap): Boolean {
+    private fun nextStatus(_x: Int, _y: Int, _gameMap: GameMap): Boolean {
         var nbAliveArround = 0
 
         if(isInRange(_x-1,_y-1)){
@@ -62,7 +62,7 @@ class GameRunner ( _size: GameCoordinate,
         return (nbAliveArround == 3) || ((nbAliveArround == 2) && _gameMap.mapCells[_x][_y].isAlive)
     }
 
-    fun isInRange(_x: Int, _y: Int): Boolean {
+    private fun isInRange(_x: Int, _y: Int): Boolean {
         return ( (_x > 0) &&
                 (_x < size.x) &&
                 (_y > 0) &&
