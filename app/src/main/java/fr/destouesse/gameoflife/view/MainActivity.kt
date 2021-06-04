@@ -38,11 +38,11 @@ class MainActivity : AppCompatActivity() {
             mainViewModel.initGame()
         }
 
-        mainViewModel.initGame()
-
         val mapObserver = Observer<String> { newMap ->
             textGameMap.text = newMap
         }
+
+        mainViewModel.initGame()
         mainViewModel.currentMap.observe(this, mapObserver)
     }
 
