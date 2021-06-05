@@ -11,7 +11,6 @@ import fr.destouesse.gameoflife.viewmodel.MainViewModel
 
 
 class MainActivity : AppCompatActivity() {
-    private val TAG = "MainActivity"
     private val mainViewModel =  MainViewModel()
 
     private val buttonGameNext by lazy {
@@ -30,11 +29,11 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        buttonGameNext.setOnClickListener(){
+        buttonGameNext.setOnClickListener {
             mainViewModel.nextIteration()
         }
 
-        buttonGameStart.setOnClickListener(){
+        buttonGameStart.setOnClickListener {
             mainViewModel.initGame()
         }
 

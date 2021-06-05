@@ -6,10 +6,10 @@ class GameMap(_size: GameCoordinate) {
 
     override
     fun toString():String{
-        var builder = StringBuilder()
+        val builder = StringBuilder()
         builder.append("\n")
-        for (yCell in 0..(size.y-1)){
-            for (xCell in 0..(size.x-1)){
+        for (yCell in 0 until size.y){
+            for (xCell in 0 until size.x){
                 if(mapCells[xCell][yCell].isAlive){
                     builder.append("*")
                 }else{
