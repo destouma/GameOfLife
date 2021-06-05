@@ -29,8 +29,8 @@ class MainViewModel: ViewModel(){
         currentMap.value = gameRunner.start().toString()
     }
 
-    fun nextIteration(){ currentMap.value = gameRunner.next().toString()
-
+    fun nextIteration(){
+        currentMap.value = gameRunner.next().toString()
     }
 
 }
